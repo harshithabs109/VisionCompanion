@@ -1,4 +1,3 @@
-# VisionCompanion
 # VisionCompanion: Real-time Object Detection with YOLOv5 and Flask
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python)
@@ -43,7 +42,7 @@ Ensure you have the following software installed before proceeding:
 1.  **Clone the VisionCompanion repository:**
 
     ```bash
-    git clone [https://github.com/harshithabs109/VisionCompanion.git](https://github.com/harshithabs109/VisionCompanion.git)
+    git clone https://github.com/harshithabs109/VisionCompanion.git
     cd VisionCompanion
     ```
 
@@ -51,7 +50,7 @@ Ensure you have the following software installed before proceeding:
     This project is structured to expect the official Ultralytics `yolov5` repository as a direct sub-directory.
 
     ```bash
-    git submodule add [https://github.com/ultralytics/yolov5.git](https://github.com/ultralytics/yolov5.git) yolov5
+    git submodule add https://github.com/ultralytics/yolov5.git yolov5
     git submodule update --init --recursive
     ```
     *If you already have a `yolov5` folder from a previous clone or download, ensure it's the Ultralytics one and its requirements are met.*
@@ -108,3 +107,53 @@ Ensure you have the following software installed before proceeding:
     Open your web browser and navigate to `http://127.0.0.1:5000/`
 
 ## 📁 Project Structure
+
+VisionCompanion/
+├── app.py                      # Main Flask application logic
+├── yolov5/                     # Cloned YOLOv5 repository (submodule)
+│   ├── models/
+│   ├── utils/
+│   └── ...
+├── static/
+│   └── results/                # Processed images and videos are saved here
+│       └── (output files)
+├── templates/
+│   ├── index.html              # HTML for file upload form
+│   ├── result.html             # HTML for displaying detection results
+├── uploads/                    # Temporary storage for uploaded files
+│   └── (uploaded files)
+├── snapshots/  
+├── runs/  
+├── venv/                       # Python Virtual Environment
+├── .gitignore                  # Specifies files/directories to ignore in Git
+└── README.md                   # This fileVisionCompanion/
+├── app.py                      # Main Flask application logic
+├── yolov5/                     # Cloned YOLOv5 repository (submodule)
+│   ├── yolov5s.pt              # YOLOv5 pre-trained weights
+│   ├── models/
+│   ├── utils/
+│   └── ...
+├── static/
+│   └── results/                # Processed images and videos are saved here
+│       └── (output files)
+├── templates/
+│   ├── index.html              # HTML for file upload form
+│   ├── result.html             # HTML for displaying detection results
+│   └── webcam.html             # HTML for live webcam feed (if added)
+├── uploads/                    # Temporary storage for uploaded files
+│   └── (uploaded files)
+├── venv/                       # Python Virtual Environment
+├── .gitignore                  # Specifies files/directories to ignore in Git
+├── README.md                   # This file
+├── detect_video.py
+├── detect_webcam_toggle.py
+├── detect.py 
+│── yolov5s.pt                  # YOLOv5 pre-trained weights
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to fork this repository, open issues for bugs or feature requests, and submit pull requests with improvements.
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
