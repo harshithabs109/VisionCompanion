@@ -107,7 +107,7 @@ Ensure you have the following software installed before proceeding:
     Open your web browser and navigate to `http://127.0.0.1:5000/`
 
 ## 📁 Project Structure
-
+```bash
 VisionCompanion/
 ├── app.py                      # Main Flask application logic
 ├── yolov5/                     # Cloned YOLOv5 repository (submodule)
