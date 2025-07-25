@@ -149,7 +149,7 @@ VisionCompanion/
 ├── detect_webcam_toggle.py
 ├── detect.py 
 │── yolov5s.pt                  # YOLOv5 pre-trained weights
-
+```
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to fork this repository, open issues for bugs or feature requests, and submit pull requests with improvements.
