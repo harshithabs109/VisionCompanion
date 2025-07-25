@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detection Result</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; background-color: #f4f4f4; color: #333; }
+        .container { max-width: 900px; margin: 40px auto; padding: 30px; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); background-color: #fff; }
+        h1 { text-align: center; color: #0056b3; margin-bottom: 30px; }
+        img, video { display: block; max-width: 100%; height: auto; margin: 20px auto; border: 1px solid #eee; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .back-link { display: block; text-align: center; margin-top: 30px; }
+        .btn { background-color: #007bff; color: white; padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; font-size: 18px; font-weight: bold; transition: background-color 0.3s ease; }
+        .btn:hover { background-color: #0056b3; }
+        .error-message { color: #dc3545; background-color: #f8d7da; border: 1px solid #f5c6cb; border-radius: 5px; padding: 10px; margin-top: 15px; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Detection Result</h1>
+        
+        {% if file_url %}
+            <p style="text-align: center;">Here is your detected {{ "video" if is_video else "image" }}:</p>
+            {% if is_video %}
+                <video controls autoplay muted>
+                    <source src="{{ file_url }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            {% else %}
+                <img src="{{ file_url }}" alt="Detected Image">
+            {% endif %}
+        {% else %}
+            <p class="error-message">Error: No content found to display. Please try uploading again.</p>
+        {% endif %}
+
+        <div class="back-link">
+            <a href="{{ url_for('upload_file') }}" class="btn">Upload another file</a>
+        </div>
+    </div>
+</body>
+</html>

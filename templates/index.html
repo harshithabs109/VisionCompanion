@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YOLOv5 Object Detection - Upload</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; background-color: #f4f4f4; color: #333; }
+        .container { max-width: 600px; margin: 40px auto; padding: 30px; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); background-color: #fff; }
+        h1 { text-align: center; color: #0056b3; margin-bottom: 30px; }
+        form { display: flex; flex-direction: column; align-items: center; gap: 15px; }
+        input[type="file"] { border: 1px solid #ccc; padding: 10px; border-radius: 5px; width: 100%; max-width: 300px; background-color: #f9f9f9; }
+        input[type="submit"] { background-color: #28a745; color: white; padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; font-size: 18px; font-weight: bold; transition: background-color 0.3s ease; }
+        input[type="submit"]:hover { background-color: #218838; }
+        .error-message { color: #dc3545; background-color: #f8d7da; border: 1px solid #f5c6cb; border-radius: 5px; padding: 10px; margin-top: 15px; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Image or Video for Object Detection</h1>
+
+        {% if error %}
+            <p class="error-message">{{ error }}</p>
+        {% endif %}
+
+        <form method="POST" enctype="multipart/form-data" action="/">
+            <input type="file" name="file" accept="image/*,video/mp4,video/avi,video/mov,video/webm" required>
+            <input type="submit" value="Upload and Detect">
+        </form>
+    </div>
+</body>
+</html>

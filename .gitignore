@@ -1,0 +1,11 @@
+venv/
+__pycache__/
+*.pt
+.DS_Store
+.env
+*.pyc
+*.pkl
+*.log
+*.sqlite3
+.idea/
+*.iml
