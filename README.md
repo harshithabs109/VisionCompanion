@@ -106,7 +106,42 @@ Ensure you have the following software installed before proceeding:
 3.  **Access the web application:**
     Open your web browser and navigate to `http://127.0.0.1:5000/`
 
+## 🛠️ YOLOv5 Command-Line Detection
+
+Run directly using `detect.py` from the `yolov5` directory:
+
+### 🖼️ Image Detection
+
+```bash
+python detect.py --weights yolov5s.pt --source data/images/your_image.jpg
+```
+
+### 🎥 Video Detection
+
+```bash
+python detect.py --weights yolov5s.pt --source data/images/video.mp4
+```
+
+### 📸 Real-Time Webcam Detection
+
+```bash
+python detect.py --weights yolov5s.pt --source 0
+```
+## 📸 Screenshots
+
+### 📷 Image Detection Result
+![Image Detection](vision-companion/snapshots/snapshots/Screenshot1.png)
+
+### 🎞️ Video Detection Result
+![Video Detection](vision-companion/snapshots/snapshots/Screenshot2.png)
+![Video Detection](vision-companion/snapshots/snapshots/Screenshot3.png)
+
+### 🎥 Real-Time Webcam Detection 
+![Webcam Detection](vision-companion/snapshots/snapshots/Screenshot4.png)
+![Webcam Detection](vision-companion/snapshots/snapshots/Screenshot5.png)
+
 ## 📁 Project Structure
+
 ```bash
 VisionCompanion/
 ├── app.py                      # Main Flask application logic
@@ -150,6 +185,7 @@ VisionCompanion/
 ├── detect.py 
 │── yolov5s.pt                  # YOLOv5 pre-trained weights
 ```
+
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to fork this repository, open issues for bugs or feature requests, and submit pull requests with improvements.
