@@ -50,7 +50,7 @@ Ensure you have the following software installed before proceeding:
     This project is structured to expect the official Ultralytics `yolov5` repository as a direct sub-directory.
 
     ```bash
-    git submodule add https://github.com/ultralytics/yolov5.git yolov5
+    git submodule add https://github.com/ultralytics/yolov5.git 
     git submodule update --init --recursive
     ```
     *If you already have a `yolov5` folder from a previous clone or download, ensure it's the Ultralytics one and its requirements are met.*
@@ -90,8 +90,8 @@ Ensure you have the following software installed before proceeding:
     python yolov5/models/hubconf.py yolov5s --weights yolov5s.pt --source "" --force
 
     # Option B: Manual Download (place in yolov5/ directory)
-    # Download from: [https://github.com/ultralytics/yolov5/releases/download/v7.0/yolov5s.pt](https://github.com/ultralytics/yolov5/releases/download/v7.0/yolov5s.pt)
-    # Then move the downloaded file into your `C:\Users\91733\Desktop\vision-companion\yolov5\` folder.
+    # Download from: (https://github.com/ultralytics/yolov5/releases/download/v7.0/yolov5s.pt)
+    # Then move the downloaded file into your `\vision-companion\yolov5\` folder.
     ```
 
 ### Running the Application
@@ -105,6 +105,20 @@ Ensure you have the following software installed before proceeding:
 
 3.  **Access the web application:**
     Open your web browser and navigate to `http://127.0.0.1:5000/`
+
+
+    ## 📸 Screenshots
+### 🏠 Home Upload Page
+![Home Page](snapshots/Screenshot7.png)
+
+### 📷 Image Detection Result
+![Image Detection](snapshots/Screenshot8.png)
+
+### 🎞️ Video Detection Result
+![Video Detection](snapshots/Screenshot9.png)
+
+### 🎥 Real-Time Webcam Detection 
+![Webcam Detection](snapshots/Screenshot10.png)
 
 ## 🛠️ YOLOv5 Command-Line Detection
 
@@ -130,15 +144,15 @@ python detect.py --weights yolov5s.pt --source 0
 ## 📸 Screenshots
 
 ### 📷 Image Detection Result
-![Image Detection](vision-companion/snapshots/snapshots/Screenshot1.png)
+![Image Detection](snapshots/Screenshot1.png)
 
 ### 🎞️ Video Detection Result
-![Video Detection](vision-companion/snapshots/snapshots/Screenshot2.png)
-![Video Detection](vision-companion/snapshots/snapshots/Screenshot3.png)
+![Video Detection](snapshots/Screenshot2.png)
+![Video Detection](snapshots/Screenshot3.png)
 
 ### 🎥 Real-Time Webcam Detection 
-![Webcam Detection](vision-companion/snapshots/snapshots/Screenshot4.png)
-![Webcam Detection](vision-companion/snapshots/snapshots/Screenshot5.png)
+![Webcam Detection](snapshots/Screenshot4.png)
+![Webcam Detection](snapshots/Screenshot5.png)
 
 ## 📁 Project Structure
 
